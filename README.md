@@ -20,10 +20,12 @@ Provides a promise based interface, that provides two things -
 
 ## File Transformation
 
-This is the raison d'etre for the library. Since different tools use different template engines, `render-dir` does not force an opinion.
-The callback function can include any necessary template engine and
-apply any transformation required. It's content-in and content-out
-from the perspective of `render-dir`
+This is the raison d'etre for the library. Since different tools use
+different template engines, `render-dir` does not force an opinion.
+
+The `transformer()` is invoked with the content of each file,
+allowing the user to provide the actual transformation logic,
+while getting a convenient `promised` interface to `fs` book-keeping
 
 ## Installation
 
@@ -48,7 +50,8 @@ export.
 ```TypeScript
 
 const renderDir = require('render-dir');
-renderDir(src, dst, cb(filepath, filecontents) => null | {filepath, filecontents});
+
+renderDir(srcdir: string, dstdir: string, transformer?: (fdesc: FileDescriptor) => FileDescriptor) => Promise<{}>
 ```
 
 ## CLI
