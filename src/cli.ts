@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 import * as program from 'commander';
-import { red, green } from 'chalk';
+import chalk from 'chalk';
 import { renderDir } from '.';
 import * as readPkg from 'read-pkg-up';
 
@@ -18,7 +18,6 @@ program
   .parse(process.argv);
 
 let _args = [program.args[0], program.args[1]];
-
 if (program.transform) {
   const tpath = path.resolve(program.transform);
   const transformer = require(tpath);
@@ -27,9 +26,9 @@ if (program.transform) {
 
 renderDir.apply(null, _args)
   .then(() => {
-    console.log(green(`files rendered to ${_args[1]}`));
+    console.log(chalk.green(`files rendered to ${_args[1]}`));
   })
   .catch(err => {
-    console.error(red(err.message));
-    console.error(red(err.stack));
+    console.error(chalk.red(err.message));
+    console.error(chalk.red(err.stack));
   });

@@ -21,9 +21,9 @@ if (program.transform) {
 }
 _1.renderDir.apply(null, _args)
     .then(() => {
-    console.log(chalk_1.green(`files rendered to ${_args[1]}`));
+    console.log(chalk_1.default.green(`files rendered to ${_args[1]}`));
 })
     .catch(err => {
-    console.error(chalk_1.red(err.message));
-    console.error(chalk_1.red(err.stack));
+    console.error(chalk_1.default.red(err.message));
+    console.error(chalk_1.default.red(err.stack));
 });
