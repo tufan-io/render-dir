@@ -51,7 +51,7 @@ test('renderDir API skip transform', async (t) => {
     dst: 'transform.js'
   }];
   const dstdir = tmp.dirSync().name;
-  const actual = await renderDir(srcdir, dstdir, (desc) => {
+  const actual = await renderDir(srcdir, dstdir, async (desc) => {
     return (desc.path === 'subdir1/skip.txt') ? null : desc;
   });
   const order = (a, b) => a.src < b.src;
@@ -62,7 +62,7 @@ test('renderDir API skip transform', async (t) => {
 test('renderDir API error when processing', async (t) => {
   try {
     const dstdir = tmp.dirSync().name;
-    await renderDir(srcdir, dstdir, (desc) => {
+    await renderDir(srcdir, dstdir, async (desc) => {
       if (desc.path === 'subdir1/skip.txt') {
         throw new Error(`throws an error instead of skip.txt`);
       }

@@ -5,4 +5,4 @@ export interface FileDescriptor {
     stats: fs.Stats;
     mime: string;
 }
-export declare const renderDir: (srcdir: string, dstdir: string, transformer?: (fdesc: FileDescriptor) => FileDescriptor) => Promise<{}>;
+export declare const renderDir: (srcdir: string, dstdir: string, transformer?: (fdesc: FileDescriptor) => Promise<FileDescriptor>) => Promise<{}>;

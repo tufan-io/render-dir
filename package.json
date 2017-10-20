@@ -1,6 +1,6 @@
 {
   "name": "render-dir",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Copies ('renders') files from srcdir -> dstdir, with transformation & filtering, with a promised interface.",
   "keywords": [
     "dir",

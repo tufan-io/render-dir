@@ -34,7 +34,7 @@ const defaultTx = (fdesc) => fdesc;
 export const renderDir = async (
   srcdir: string,
   dstdir: string,
-  transformer: (fdesc: FileDescriptor) => null | FileDescriptor = defaultTx
+  transformer: (fdesc: FileDescriptor) => Promise<null | FileDescriptor> = defaultTx
 ) => {
   return new Promise((resolve, reject) => {
     const state = {
