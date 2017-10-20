@@ -1,3 +1,13 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2017-10-20)
+
+
+### Features
+
+* The `transformer()` function is now async - affords a lot of flexibility in transformation ([a515c2e](https://github.com/tufan-io/render-dir/commit/a515c2e))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-10-20)
 
