@@ -78,10 +78,10 @@
     ]
   },
   "devDependencies": {
-    "@types/circular-json": "^0.1.30",
-    "@types/node": "^8.0.46",
+    "@types/circular-json": "^0.4.0",
+    "@types/node": "^8.0.47",
     "@types/semver": "^5.3.31",
-    "ava": "^0.22.0",
+    "ava": "^0.23.0",
     "commander": "^2.9.0",
     "commitizen": "^2.9.6",
     "conventional-changelog": "^1.1.6",
@@ -99,16 +99,17 @@
     "pkg-ok": "^1.0.1",
     "rimraf": "^2.6.1",
     "semantic-release": "^8.2.0",
-    "tslint": "^5.5.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.2.1"
   },
   "dependencies": {
     "awaiting": "^3.0.0",
-    "chalk": "^2.2.0",
-    "graceful-fs": "^4.1.11",
+    "chalk": "^2.3.0",
     "file-type": "^7.2.0",
+    "graceful-fs": "^4.1.11",
     "klaw": "^2.1.0",
     "mkdirp": "^0.5.1",
+    "read-pkg-up": "^2.0.0",
     "runtime-engine-check": "^1.0.0",
     "semver": "^5.3.0"
   },
