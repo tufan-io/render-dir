@@ -26,7 +26,7 @@ const getContentAndMime = (fpath) => __awaiter(this, void 0, void 0, function* (
 const reorder = (paths) => {
     return paths.sort((a, b) => a.src > b.src);
 };
-const defaultTx = (fdesc) => fdesc;
+const defaultTx = (fdesc) => __awaiter(this, void 0, void 0, function* () { return fdesc; });
 exports.renderDir = (srcdir, dstdir, transformer = defaultTx) => __awaiter(this, void 0, void 0, function* () {
     return new Promise((resolve, reject) => {
         const state = {

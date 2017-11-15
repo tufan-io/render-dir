@@ -13,6 +13,9 @@ script:
   - npm run prepush
   # get the coverage metrics to coveralls
   - npm run coveralls-report
+after_failure:
+  - git status
+  - git diff
 after_success:
   - npm run semantic-release
 branches:

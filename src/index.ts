@@ -29,7 +29,7 @@ const reorder = (paths) => {
   return paths.sort((a, b) => a.src > b.src);
 };
 
-const defaultTx = (fdesc) => fdesc;
+const defaultTx = async (fdesc) => fdesc;
 
 export const renderDir = async (
   srcdir: string,
