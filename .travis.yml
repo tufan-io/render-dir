@@ -12,12 +12,12 @@ before_script:
   - npm prune
 script:
   - npm run prepush
-  # get the coverage metrics to coveralls
-  - npm run coveralls-report
 after_failure:
   - git status
   - git diff
 after_success:
+  # get the coverage metrics to coveralls
+  - npm run coveralls-report
   - npm run semantic-release
 branches:
   except:
